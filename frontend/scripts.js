@@ -1,4 +1,4 @@
-const API_ENDPOINT = 'http://211.183.3.100:8989/posts';
+const API_ENDPOINT = 'http://211.183.3.100/posts';
 let currentPage = 1; // 현재 페이지 전역 변수로 선언
 
 function fetchPosts(page = 1) {

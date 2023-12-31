@@ -1,0 +1,49 @@
+version: '3.9'
+
+services:
+    db:
+        image: mysql:8.0
+        networks:
+            - acs_net
+        environment:
+            MYSQL_ROOT_PASSWORD: 1234
+            MYSQL_USER: acs_master
+            MYSQL_PASSWORD: 1234
+            MYSQL_DATABASE: acs_db
+        ports:
+            - 33306:3306
+        healthcheck:
+            test: ["CMD", "mysqladmin", "ping", "-h", "localhost"]
+            interval: 10s
+            timeout: 5s
+            retries: 5
+        deploy:
+            replicas: 1
+            placement:
+                constraints: [node.role == worker]
+    was:
+        image: 211.183.3.222:5000/acs-was:7.0
+        networks:
+            - acs_net
+        ports:
+            - 8080:8080
+        deploy:
+            replicas: 3
+            placement:
+                constraints: [node.role == worker]
+
+    web:
+        image: 211.183.3.222:5000/acs-web:8.0
+        networks:
+            - acs_net
+        ports:
+            - 80:80
+        deploy:
+            replicas: 1
+            placement:
+                constraints: [node.role == manager]
+
+networks:
+    acs_net:
+        external: true
+

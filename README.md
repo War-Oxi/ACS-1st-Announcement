@@ -1,1 +1,1 @@
-# ACS-1st-Announcement ㅋㅋ
+# ACS-1st-Announcement

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const API_ENDPOINT = 'http://localhost:8080/posts';
+=======
+const API_ENDPOINT = 'http://211.183.3.100/posts';
+>>>>>>> b35e06c17886584c3b51b4a41a85deb3b38725be
 let currentPage = 1; // 현재 페이지 전역 변수로 선언
 
 function fetchPosts(page = 1) {
@@ -66,4 +70,8 @@ function setupPagination(totalPages, currentPage = 1) {
 // Initial fetch for the first page
 fetchPosts(currentPage);
 // Setup dummy pagination (you need to adjust totalPages based on your actual API response)
+<<<<<<< HEAD
 // setupPagination(10);
+=======
+// setupPagination(10);
+>>>>>>> b35e06c17886584c3b51b4a41a85deb3b38725be

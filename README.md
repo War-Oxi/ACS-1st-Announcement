@@ -9,6 +9,7 @@
 - Docker Private Registry
 - Nginx
 - Ubuntu
+- VMware
 
 ## Architecture
 ![image](https://github.com/War-Oxi/ACS-1st-Notice-Board/assets/72260110/8b853516-9539-40b5-826d-4aadd7f29512)

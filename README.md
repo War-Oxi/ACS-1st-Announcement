@@ -12,5 +12,7 @@
 - VMware
 
 ## Architecture
-![image](https://github.com/War-Oxi/ACS-1st-Notice-Board/assets/72260110/8b853516-9539-40b5-826d-4aadd7f29512)
+![ACS Architecture](https://github.com/War-Oxi/ACS-1st-Notice-Board/assets/72260110/9c10e239-64ea-4779-941e-9e078e3750b1)
 
+## Load-Balancing
+![ACS-Load-Balancing](https://github.com/War-Oxi/ACS-1st-Notice-Board/assets/72260110/defc1d9d-7c1a-4b3a-99d6-52e0d93bf7fd)

@@ -31,6 +31,8 @@ services:
             replicas: 3
             placement:
                 constraints: [node.role == worker]
+        depends_on:
+            - db
 
     web:
         image: 211.183.3.222:5000/acs-web:8.0
@@ -42,8 +44,9 @@ services:
             replicas: 1
             placement:
                 constraints: [node.role == manager]
+        depends_on:
+            - was
 
 networks:
     acs_net:
         external: true
-
